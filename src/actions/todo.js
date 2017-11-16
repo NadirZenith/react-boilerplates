@@ -1,15 +1,18 @@
 import * as todoActions from '../constants/todo';
 
-export function addTodo(todo) {
-  return {
-    type: todoActions.ADD_TODO,
-    text: todo
-  };
+let nextTodoId = 0
+
+export const addTodo = todo => {
+    return {
+        type: todoActions.ADD_TODO,
+        id: nextTodoId++,
+        text: todo
+    };
 };
 
-export function toggleTodo(index) {
-  return {
-    type: todoActions.TOGGLE_TODO,
-    index: index
-  };
+export const toggleTodo = index => {
+    return {
+        type: todoActions.TOGGLE_TODO,
+        index: index
+    };
 };

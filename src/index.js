@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-
+import {Provider} from 'react-redux';
 import * as actions from './actions';
 import configureStore from './configureStore';
+import App from './components/App'
 
+
+//https://redux.js.org/docs/basics/UsageWithReact.html
+//https://redux.js.org/docs/basics/ExampleTodoList.html
+//https://www.robinwieruch.de/the-soundcloud-client-in-react-redux/
 const initialState = {
     visibilityFilter: 'SHOW_ALL',
     todos: []
@@ -33,10 +37,10 @@ console.log(store.getState())
 const title = 'React Boilerplates';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <div>{title}</div>
-  </Provider>,
-  document.getElementById('app')
+    <Provider store={store}>
+        <App title={title} />
+    </Provider>,
+    document.getElementById('app')
 );
 
 module.hot.accept();
