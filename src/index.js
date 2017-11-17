@@ -6,9 +6,9 @@ import configureStore from './configureStore';
 import App from './components/App'
 
 
-//https://redux.js.org/docs/basics/UsageWithReact.html
-//https://redux.js.org/docs/basics/ExampleTodoList.html
-//https://www.robinwieruch.de/the-soundcloud-client-in-react-redux/
+// https://redux.js.org/docs/basics/UsageWithReact.html
+// https://redux.js.org/docs/basics/ExampleTodoList.html
+// https://www.robinwieruch.de/the-soundcloud-client-in-react-redux/
 // https://codepen.io/stowball/post/a-dummy-s-guide-to-redux-and-thunk-in-react
 const initialState = {
     visibilityFilter: 'SHOW_ALL',
