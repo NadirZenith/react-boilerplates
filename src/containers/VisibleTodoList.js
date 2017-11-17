@@ -1,6 +1,8 @@
 import { connect } from 'react-redux'
 import * as todoActionsFilters from '../constants/todo';
-import * as actions from '../actions';
+import * as actions from '../actions'
+
+// import getVisibleTodos from '../reducers'
 
 import TodoList from '../components/TodoList'
 
