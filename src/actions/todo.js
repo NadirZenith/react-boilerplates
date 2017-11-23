@@ -16,3 +16,10 @@ export const toggleTodo = index => {
         index: index
     };
 };
+
+export const setVisibilityFilter = filter => {
+  return {
+    type: todoActions.SET_VISIBILITY_FILTER,
+    filter
+  }
+}

@@ -2,7 +2,7 @@ import * as todoActions from '../constants/todo';
 
 const initialState = [];
 
-export const visibilityFilter = (state = 'SHOW_ALL', action) => {
+export const visibilityFilter = (state = todoActions.SHOW_ALL, action) => {
     switch (action.type) {
         case todoActions.SET_VISIBILITY_FILTER:
             return action.filter
