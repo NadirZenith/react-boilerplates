@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
+import {SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED} from './Constants'
 
-const state = {
+const initialState = {
     title: 'React Boilerplates todo',
-    visibilityFilter: 'SHOW_ALL',
+    visibilityFilter: SHOW_ALL,
     todos: [
         {
             id: 1,
@@ -20,7 +21,7 @@ const state = {
 }
 
 ReactDOM.render(
-  <App title={state.title} todos={state.todos}/>,
+  <App title={initialState.title} todos={initialState.todos} visibilityFilter={initialState.visibilityFilter}/>,
   document.getElementById('app')
 );
 

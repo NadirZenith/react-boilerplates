@@ -12,9 +12,14 @@ class App extends React.Component {
       todos: props.todos
     }
     this.title = props.title
+    this.todos = props.todos
     this.handleTodoClick = this.handleTodoClick.bind(this)
     this.handleFilterClick = this.handleFilterClick.bind(this)
   }
+
+  // componentDidMount(){
+  //   this.handleFilterClick(SHOW_ALL)
+  // }
 
   handleTodoClick(id) {
 
@@ -24,23 +29,23 @@ class App extends React.Component {
       }
       return todo
     })
+
     this.setState({todos: remainder})
-    // alert(todo);
-    // console.log(event)
   }
 
   handleFilterClick(filter) {
-    const remainder = this.state.todos.filter((todo) => {
-      if (filter === SHOW_ALL) {
-        return todo
-      }
-      if (filter === SHOW_COMPLETED && todo.completed === true) {
-        return todo
-      }
-      if (filter === SHOW_ACTIVE && todo.completed === false) {
-        return todo
-      }
-    })
+    var remainder = this.todos
+    switch (filter) {
+      case SHOW_COMPLETED:
+        remainder = remainder.filter(t => t.completed)
+        break
+      case SHOW_ACTIVE:
+        remainder = remainder.filter(t => !t.completed)
+        break
+      case SHOW_ALL:
+      default:
+        // show all
+    }
 
     this.setState({
       visibilityFilter: filter,
