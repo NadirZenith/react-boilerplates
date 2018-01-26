@@ -1,8 +1,9 @@
-module.exports = {
+module.exports = [{
+  name: 'client',
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './src/index.js'
+    './client/index.js'
   ],
   module: {
     loaders: [{
@@ -15,12 +16,12 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/dist/client',
     publicPath: '/',
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: './dist/client',
     hot: true
   }
-};
+}];
