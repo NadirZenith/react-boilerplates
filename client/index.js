@@ -8,18 +8,7 @@ const initialState = {
         title: 'React Boilerplates todo',
         visibilityFilter: SHOW_ALL,
         term: 'go swim',
-        todos: [
-            {
-                id: 1,
-                completed: true,
-                text: 'do this tomorrow'
-            },
-            {
-                id: 2,
-                completed: false,
-                text: 'do this today'
-            }
-        ],
+        todos: [],
     },
     debug: 1
 }
