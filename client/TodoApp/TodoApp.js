@@ -124,7 +124,6 @@ class TodoApp extends React.Component {
                     currentFilter={this.state.visibilityFilter}
                     onFilterClick={this.handleFilterClick}
                 />
-                {!this.props.debug ? null :<Dev />}
             </div>
         )
     }

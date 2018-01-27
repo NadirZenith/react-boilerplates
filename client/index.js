@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
-import {SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED} from './Constants'
-// import TodoApp from "./TodoApp";
-//
+import { SHOW_ALL } from './TodoApp/Constants'
+
 const initialState = {
     title: 'React Boilerplates todo',
     visibilityFilter: SHOW_ALL,
-    term: 'sapo',
+    term: '',
     todos: [
         {
             id: 1,
@@ -24,13 +23,7 @@ const initialState = {
 }
 
 ReactDOM.render(
-  <App {...initialState}
-      // title={initialState.title}
-      // term={initialState.term}
-      // todos={initialState.todos}
-      // visibilityFilter={initialState.visibilityFilter}
-      // debug={initialState.debug}
-  />,
+  <App {...initialState}/>,
   document.getElementById('app')
 );
 
