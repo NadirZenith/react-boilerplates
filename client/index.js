@@ -21,7 +21,7 @@ const initialState = {
             }
         ],
     },
-    debug: 0
+    debug: 1
 }
 
 ReactDOM.render(
