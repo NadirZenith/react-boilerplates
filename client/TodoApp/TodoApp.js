@@ -2,7 +2,6 @@ import React from "react"
 import Footer from "./Footer"
 import AddTodo from "./AddTodo"
 import * as api from "./api"
-import Dev from "./Dev"
 import TodoList from './TodoList'
 import Loader from './Loader'
 import {SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED} from './Constants'
