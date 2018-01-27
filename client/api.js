@@ -2,6 +2,8 @@ import axios from "axios"
 
 const API = 'https://5a6b9ab78bdfbe0012adc1e7.mockapi.io/api/v1/todos';
 
+const API_ID = (id) => API + '/' + id;
+
 const handleError = (error) => {
     console.warn(error);
     return null;
@@ -24,7 +26,7 @@ export const addTodo = (todo, handler) => {
 }
 
 export const updateTodo = (todo, handler) => {
-    return axios.put(API + '/' + todo.id, todo)
+    return axios.put(API_ID(todo.id), todo)
         .then(response => {
             handler(response.data)
         })
@@ -32,7 +34,7 @@ export const updateTodo = (todo, handler) => {
 }
 
 export const deleteTodo = (id, handler) => {
-    return axios.delete(API + '/' + id)
+    return axios.delete(API_ID(id))
         .then(response => {
             handler(response.data)
         })
