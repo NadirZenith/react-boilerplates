@@ -10,6 +10,11 @@ const initialState = {
         term: 'go swim',
         todos: [],
     },
+
+    calc: {
+        value: 0
+    },
+
     debug: 1
 }
 

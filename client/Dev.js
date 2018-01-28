@@ -24,6 +24,7 @@ class Dev extends React.Component {
     render() {
         return (
             <div>
+                <hr />
                 <button onClick={this.axiosTest}>axios test</button>
                 <button onClick={getTodos}>axios test2</button>
             </div>
